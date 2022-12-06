@@ -3,12 +3,13 @@ package com.example.testapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.testapp.databinding.FragmentFifthBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,7 +47,7 @@ class FifthFragment : Fragment() {
         width /= 2
         // Convert half width into millimeters
         width *= (25.4f)
-        width -= offset
+        width = width-offset
         width -= 10
 
         // Display the new value in the text view.
@@ -127,7 +128,7 @@ class FifthFragment : Fragment() {
         i.data = Uri.parse(url)
         startActivity(i)
     }
-    private fun openHelp() {
+    private fun openHelp(view: View) {
         val url = "https://www.drivingline.com/articles/idiots-guide-to-wheel-fitment/#:~:text=Put%20simply%2C%20to%20find%20if,to%20see%20if%20it%20fits."
         // Display the new value in the text view.
         val i = Intent(Intent.ACTION_VIEW)
@@ -173,7 +174,7 @@ class FifthFragment : Fragment() {
             openUrl(view)
         }
         view.findViewById<Button>(R.id.button_measuring3).setOnClickListener {
-            openHelp()
+            openHelp(view)
         }
     }
 

@@ -3,12 +3,13 @@ package com.example.testapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.testapp.databinding.FragmentFourthBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -16,6 +17,8 @@ import com.example.testapp.databinding.FragmentFourthBinding
 
 /**
  * A simple [Fragment] subclass.
+ * Use the [FourthFragment.newInstance] factory method to
+ * create an instance of this fragment.
  */
 class FourthFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -40,7 +43,7 @@ class FourthFragment : Fragment() {
         width /= 2
         // Convert half width into millimeters
         width *= (25.4f)
-        width -= offset
+        width = width-offset
         width += 10
 
         // Display the new value in the text view.
@@ -99,19 +102,19 @@ class FourthFragment : Fragment() {
         val showWheelWidthTextView = view.findViewById<TextView>(R.id.textView_wheel_width2)
         val showOffsetTextView = view.findViewById<TextView>(R.id.textView_Fitment2)
         // Get the value of the text view.
-        val wheelWidthString = showWheelWidthTextView.text.toString()
-        val offsetString = showOffsetTextView.text.toString()
+        val WheelWidthString = showWheelWidthTextView.text.toString()
+        val OffsetString = showOffsetTextView.text.toString()
         // Convert value to a number and increment it
         val string1 = "https://www.fitmentindustries.com/store/wheels?sort=instock&width="
         val string2 = "&offset="
         val string3 = "&saleToggle=0&qdToggle=0&suspension=Stock&modification=No%20Modification&rubbing=No%20rubbing%20or%20scrubbing"
-        val url = string1+wheelWidthString+string2+offsetString+string3
+        val url = string1+WheelWidthString+string2+OffsetString+string3
         // Display the new value in the text view.
         val i = Intent(Intent.ACTION_VIEW)
         i.data = Uri.parse(url)
         startActivity(i)
     }
-    private fun openHelp() {
+    private fun openHelp(view: View) {
         val url = "https://www.drivingline.com/articles/idiots-guide-to-wheel-fitment/#:~:text=Put%20simply%2C%20to%20find%20if,to%20see%20if%20it%20fits."
         // Display the new value in the text view.
         val i = Intent(Intent.ACTION_VIEW)
@@ -164,7 +167,7 @@ class FourthFragment : Fragment() {
             openUrl(view)
         }
         view.findViewById<Button>(R.id.button_measure2).setOnClickListener {
-            openHelp()
+            openHelp(view)
         }
     }
 

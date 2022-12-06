@@ -1,10 +1,12 @@
 package com.example.testapp
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.testapp.databinding.FragmentThirdBinding
 
@@ -27,6 +29,27 @@ class ThirdFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private fun calculateFitment(view: View) {
+        // Get the text view
+//        val showFitmentTextView = view.findViewById<TextView>(R.id.textView_test)
+//        val showWheelWidthTextView = view.findViewById<TextView>(R.id.textview_wheel_width)
+//        val showWheelOffsetTextView = view.findViewById<TextView>(R.id.textview_offset)
+//        //val showTestResultsTextView = view.findViewById<TextView>(R.id.textView_fitment)
+//        // Get the value of the text view.
+//        val widthString = showWheelWidthTextView.text.toString()
+//        val offsetString = showWheelOffsetTextView.text.toString()
+//        // Convert value to a number and increment it
+//        var width = widthString.toFloat()
+//        val offset = offsetString.toFloat()
+//        width /= 2
+//        // Convert half width into millimeters
+//        width *= (25.4f)
+//        width = width-offset
+//
+//        // Display the new value in the text view.
+//        showFitmentTextView.text = width.toString()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

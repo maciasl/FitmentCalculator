@@ -3,12 +3,14 @@ package com.example.testapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.fragment.app.Fragment
+import java.util.logging.Logger.global
+import kotlin.math.roundToInt
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,9 +53,9 @@ class SixthFragment : Fragment() {
         var aspectRatio = arString.toFloat()
         val diameter = diameterString.toFloat()
         val newRim = newRimString.toFloat()
-        tireCalculateString.toFloat()
+        var tireSize = tireCalculateString.toFloat()
         var newWidth = newRimWidthString.toFloat()
-        var roundDown: Int
+        var roundDown = 0
         aspectRatio /= 100
         var calculate = width*aspectRatio
         calculate *= 2
@@ -233,13 +235,13 @@ class SixthFragment : Fragment() {
         val showWheelDiameterTextView = view.findViewById<TextView>(R.id.textView_final_wheeldiameter)
         // Get the value of the text view.
         val tireWidthString = showTireWidthTextView.text.toString()
-        val aspectRatioString = showAspectRatioTextView.text.toString()
-        val wheelDiameterString = showWheelDiameterTextView.text.toString()
+        val AspectRatioString = showAspectRatioTextView.text.toString()
+        val WheelDiameterString = showWheelDiameterTextView.text.toString()
         // Convert value to a number and increment it
         val string1 = "https://www.fitmentindustries.com/store/tires?&width_from="
         val string2 = "&ratio_from="
         val string3 = "&diameter_from="
-        val url = string1+tireWidthString+string2+aspectRatioString+string3+wheelDiameterString
+        val url = string1+tireWidthString+string2+AspectRatioString+string3+WheelDiameterString
         // Display the new value in the text view.
         val i = Intent(Intent.ACTION_VIEW)
         i.data = Uri.parse(url)
