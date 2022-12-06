@@ -22,7 +22,8 @@
             app:layout_constraintBottom_toTopOf="@+id/textView_wheel_width2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView_question4"
@@ -49,7 +50,7 @@
             app:layout_constraintBottom_toTopOf="@+id/button_decrease_offset2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
         <Button
             android:id="@+id/button_increase_width2"

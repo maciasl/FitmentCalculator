@@ -25,7 +25,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/button_increase_tirewidth"
@@ -37,7 +38,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/button_decrease_ar"
@@ -73,7 +75,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_diameter_text" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_diameter_text"
+                tools:ignore="TextContrastCheck" />
 
             <Button
                 android:id="@+id/button_increase_wheeldiameter"
@@ -336,7 +339,8 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_increase_tirewidth" />
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_tirewidth"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textView_wheel_diameter_text"
