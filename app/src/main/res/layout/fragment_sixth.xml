@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SixthFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/portrait">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_decrease_tirewidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text" />
+
+            <Button
+                android:id="@+id/button_increase_tirewidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text" />
+
+            <Button
+                android:id="@+id/button_decrease_ar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_aspect_ratio_text" />
+
+            <Button
+                android:id="@+id/button_increase_ar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_aspect_ratio_text" />
+
+            <Button
+                android:id="@+id/button_decrease_wheeldiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_diameter_text" />
+
+            <Button
+                android:id="@+id/button_increase_wheeldiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_diameter_text" />
+
+            <TextView
+                android:id="@+id/textView_tire_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tire_width"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView_aspect_ratio_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tire_width_text" />
+
+            <TextView
+                android:id="@+id/textView_aspect_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/aspect_ratio"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView_wheel_diameter_text"
+                app:layout_constraintEnd_toStartOf="@+id/button_increase_tirewidth"
+                app:layout_constraintStart_toEndOf="@+id/button_decrease_ar"
+                app:layout_constraintTop_toBottomOf="@+id/textView_aspect_ratio_text" />
+
+            <TextView
+                android:id="@+id/textView_wheeldiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rim_diameter"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView_wheel_width_text"
+                app:layout_constraintEnd_toStartOf="@+id/button_increase_wheeldiameter"
+                app:layout_constraintStart_toEndOf="@+id/button_decrease_wheeldiameter"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_diameter_text" />
+
+            <TextView
+                android:id="@+id/textView_calculated_tire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_tire_width"
+                android:textColor="@color/buttonBackground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView_final_aspectratio"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/button_decrease_new_rim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_diameter_text" />
+
+            <Button
+                android:id="@+id/button_increase_new_rim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_diameter_text" />
+
+            <TextView
+                android:id="@+id/textView_new_rim_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_rim_size"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView_new_wheel_width_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_diameter_text" />
+
+            <Button
+                android:id="@+id/button_decrease_rim_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_width_text" />
+
+            <Button
+                android:id="@+id/button_increase_rim_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_width_text" />
+
+            <TextView
+                android:id="@+id/textView_rim_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rim_width"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView_new_wheel_diameter_text"
+                app:layout_constraintEnd_toStartOf="@+id/button_increase_rim_width"
+                app:layout_constraintStart_toEndOf="@+id/button_decrease_rim_width"
+                app:layout_constraintTop_toBottomOf="@+id/textView_wheel_width_text" />
+
+            <TextView
+                android:id="@+id/textView_new_rim_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_rim_width"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button_final_tire_calculate"
+                app:layout_constraintEnd_toStartOf="@+id/button_new_rim_width_increase"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toEndOf="@+id/button_new_rim_width_decrease"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_width_text" />
+
+            <Button
+                android:id="@+id/button_new_rim_width_decrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/decrease"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_width_text" />
+
+            <Button
+                android:id="@+id/button_new_rim_width_increase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/increase"
+                android:textColor="@color/buttonBackground"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_new_wheel_width_text" />
+
+            <TextView
+                android:id="@+id/textView_final_aspectratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_aspect_ratio"
+                android:textColor="@color/buttonBackground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_buy_link"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView_slash2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash"
+                android:textColor="@color/buttonBackground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView_final_wheeldiameter"
+                app:layout_constraintStart_toEndOf="@+id/textView_final_aspectratio" />
+
+            <TextView
+                android:id="@+id/textView_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash"
+                android:textColor="@color/buttonBackground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView_final_aspectratio"
+                app:layout_constraintStart_toEndOf="@+id/textView_calculated_tire" />
+
+            <TextView
+                android:id="@+id/textView_final_wheeldiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_wheelDiameter"
+                android:textColor="@color/buttonBackground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_final_aspectratio" />
+
+            <Button
+                android:id="@+id/button_final_tire_calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/buttonBackground"
+                android:text="@string/calculate"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_new_rim_width_increase" />
+
+            <TextView
+                android:id="@+id/textView_tire_width_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tire_width_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_aspect_ratio_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aspect_ratio_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_tirewidth" />
+
+            <TextView
+                android:id="@+id/textView_wheel_diameter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wheel_diameter_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_ar" />
+
+            <TextView
+                android:id="@+id/textView_wheel_width_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wheel_width_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_wheeldiameter" />
+
+            <TextView
+                android:id="@+id/textView_new_wheel_diameter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_wheel_diameter_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_rim_width" />
+
+            <TextView
+                android:id="@+id/textView_new_wheel_width_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_wheel_width_text"
+                android:textColor="@color/buttonBackground"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_increase_new_rim" />
+
+            <Button
+                android:id="@+id/button_buy_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:text="@string/buy_link"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_final_tire_calculate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

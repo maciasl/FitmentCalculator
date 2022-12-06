@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="random_button_text">Random</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Fitment Calculator</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="toast_button_text">Toast</string>
+    <string name="count_button_text">Wheel Offset</string>
+    <string name="next">Next</string>
+    <string name="wheel_width">10.0</string>
+    <string name="wheel_diameter">90</string>
+    <string name="increase">+</string>
+    <string name="decrease">-</string>
+    <string name="measuring">How do I measure this?</string>
+    <string name="question1">Wheel Width</string>
+    <string name="question2">Hub to Fender Distance</string>
+    <string name="tucked">Tucked</string>
+    <string name="flush">Flush</string>
+    <string name="poked">Poked</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test_results">0</string>
+    <string name="calculate">Calculate</string>
+    <string name="inches">Inches</string>
+    <string name="millimeters">mm</string>
+    <string name="tire_width">245</string>
+    <string name="aspect_ratio">40</string>
+    <string name="rim_diameter">16</string>
+    <string name="final_tire_width">245</string>
+    <string name="tire_size">Tire Size</string>
+    <string name="new_rim_size">18</string>
+    <string name="rim_width">7.5</string>
+    <string name="new_rim_width">9.5</string>
+    <string name="final_aspect_ratio">40</string>
+    <string name="final_wheelDiameter">18</string>
+    <string name="slash">/</string>
+    <string name="tire_width_text">Tire Width</string>
+    <string name="aspect_ratio_text">Aspect Ratio</string>
+    <string name="wheel_diameter_text">Wheel Diameter</string>
+    <string name="wheel_width_text">Wheel Width</string>
+    <string name="new_wheel_diameter_text">New Wheel Diameter</string>
+    <string name="new_wheel_width_text">New Wheel Width</string>
+    <string name="buy_link">Where to buy?</string>
+</resources>
