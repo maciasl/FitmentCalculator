@@ -1,4 +1,7 @@
 # *Fitment Calculator*
+
+concept.md
+
 ## Description/Motivation
 
 For my project I was thinking of creating a phone application that will allow people to use their cellphone to quickly calculate waht size rims and specifications they need for their cars. I'd like to give different style options too inorder to satisfy the needs of different car enthusiasts.'
