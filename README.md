@@ -22,6 +22,10 @@ In order to create this application I will need to download the Android Studio I
 
 <code>design.md</code>
 
+##Test Plan
+
+<code>test.plan.md</code>
+
 ## Built With
 
 Android Studio
