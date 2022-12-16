@@ -14,9 +14,13 @@ For this project I plan on having a working wheel offset calculator and a workin
 
 MY vision for this Fitment Calculator is a user friendly application that will be used by car enthusiast everyday around the world that want to find the perfect wheel offset for their desired fitment style. My vision is for there to be no more fighting over gatekeeping wheel size specifications.
 
-### Prerequisites
+## Prerequisites
 
 In order to create this application I will need to download the Android Studio IDE that has multiple template to give one a head start
+
+## Design
+
+<code>design.md</code>
 
 ## Built With
 
